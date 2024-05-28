@@ -1,8 +1,9 @@
-# React + Vite
+# Building a Random Color Generator in React
+## CSS Topics
+- The css [background-color](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) property
+- [rgb values](https://www.w3schools.com/html/html_colors_rgb.asp)
+- [inline styles](https://react.dev/reference/react-dom/components/common#applying-css-styles) in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Array Methods
+- [.join()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
+- [.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
