@@ -1,10 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
 import './styles.css';
 
 export default function App() {
     return (
-        <div className='App'>
-            <div className='Instructions'>
+        <div className='app'>
+            <div className='instructions'>
                 <div className='block'>
                     <h1>Random Color</h1>
                     <p>
@@ -31,7 +30,7 @@ export default function App() {
                         Help
                     </a>
                 </div>
-                <div id='randomcolor'>
+                <div id='randomColor'>
                     <h2>Your color is:</h2>
                     <button>New Color!</button>
                 </div>

@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-.App {
+.app {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -14,7 +14,7 @@
     min-height: 100vh;
 }
 
-.Instructions {
+.instructions {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +53,7 @@ a.link {
     border-radius: 3px;
 }
 
-#randomcolor > * {
+#randomColor > * {
     display: flex;
     flex-direction: column;
     text-align: center;
