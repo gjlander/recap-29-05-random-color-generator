@@ -1,8 +1,31 @@
 import './styles.css';
-
+import { useState } from 'react';
 export default function App() {
+    //store our color array in a state
+    const [color, setColor] = useState([100, 220, 7]);
+
+    //format it into rgb, or rgba as we did at the end of the recap
+    const formattedColor = `rgba(${color.join()})`;
+
+    const updateColor = () => {
+        //declare an empty array
+        const random = [];
+        //iterate over it three times to generate our rgb values
+        for (let i = 0; i < 3; i++) {
+            //use the math object to generate a whole number 0-255
+            random.push(Math.floor(Math.random() * 256));
+        }
+        //our a value needs to be a single decimal 0-1
+        random.push(Math.random().toFixed(1));
+        //use the setter function to update our color state, which will trigger a rerender
+        setColor(random);
+    };
+
+    //store the boolean result of this comparison in a variable
+    const isDark = color.reduce((a, b) => a + b) < 127 * 3;
     return (
-        <div className='app'>
+        // since we depend on a JS variable, we can use inline styles in our JSX
+        <div className='app' style={{ backgroundColor: formattedColor }}>
             <div className='instructions'>
                 <div className='block'>
                     <h1>Random Color</h1>
@@ -31,8 +54,16 @@ export default function App() {
                     </a>
                 </div>
                 <div id='randomColor'>
-                    <h2>Your color is:</h2>
-                    <button>New Color!</button>
+                    {/* We can also conditionally apply classes */}
+                    <h2 className={isDark ? 'white' : 'black'}>
+                        Your color is: {formattedColor}
+                    </h2>
+                    <button
+                        className={isDark ? 'light-button' : 'dark-button'}
+                        onClick={updateColor}
+                    >
+                        New Color!
+                    </button>
                 </div>
             </div>
         </div>
