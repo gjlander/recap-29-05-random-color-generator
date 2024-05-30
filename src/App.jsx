@@ -24,7 +24,7 @@ export default function App() {
     //store the boolean result of this comparison in a variable
     const isDark = color.reduce((a, b) => a + b) < 127 * 3;
     return (
-        // since we depend on a JS variable, we can use inline styles in our JSX
+        // since we depend on a JS variable, it's appropriate to use inline styles in our JSX
         <div className='app' style={{ backgroundColor: formattedColor }}>
             <div className='instructions'>
                 <div className='block'>
